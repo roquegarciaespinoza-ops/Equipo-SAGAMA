@@ -20,6 +20,9 @@ Comparación A/B simulada de umbrales 0.50 y 0.28: se reducen 18 falsos negativo
 ## Equipo
 Equipo SAGAMA — cuatro integrantes (nombres por completar).
 
+## Evidencia ejecutada del equipo
+- [Colab ejecutado con código, salidas y conclusiones](notebooks/Proyecto_Pima_Evaluacion_ejecutado.ipynb). Archivo original proporcionado por el equipo; conservarlo como evidencia y punto de partida para los entregables.
+
 ## Estructura
 - `data/`: instrucciones para obtener el dataset.
 - `notebooks/exploracion.ipynb`: carga, estadísticas, distribuciones y desbalance.
@@ -51,4 +54,4 @@ Registrar aquí los nombres, responsabilidades y contribuciones de los cuatro in
 ## Preparación
 Instalar dependencias con `pip install -r requirements.txt`, descargar el dataset y guardarlo localmente en `data/diabetes.csv`.
 
-**Estado:** repositorio inicial creado y definición clínica completada; existe un Colab ejecutado aportado por el equipo, cuyos resultados se documentaron arriba. Pendiente integrar el notebook ejecutado original, sus artefactos exportados, y completar el reporte y el dashboard en el repositorio.
+**Estado:** repositorio inicial y definición clínica documentados. El notebook ejecutado original ya está incorporado con sus salidas. Pendientes: exportar artefactos independientes y completar reporte y dashboard.
