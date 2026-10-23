@@ -6,8 +6,16 @@
 
 **Dataset:** https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database
 
-## Definición del problema clínico
-Se busca identificar casos positivos de diabetes tipo 2 a partir de las variables disponibles. Los falsos negativos pueden retrasar la detección y los falsos positivos pueden ocasionar pruebas adicionales. Este proyecto es académico y no constituye una herramienta clínica validada.
+## Definición del problema clínico (Paso 2)
+El objetivo es identificar posibles casos de diabetes tipo 2 mediante variables del dataset Pima Indians Diabetes y apoyar la priorización de evaluaciones médicas. Un falso negativo puede retrasar la detección; un falso positivo puede motivar evaluaciones adicionales innecesarias. La detección temprana es relevante para la salud pública, pero estos resultados académicos no deben utilizarse para diagnóstico clínico.
+
+**Criterio SMART:** recall ≥ 80 % y especificidad ≥ 70 %, evaluados mediante validación cruzada durante una semana de experimentación.
+
+**Resultados observados en el Colab ejecutado:** 768 registros (614 entrenamiento, 154 prueba), regresión logística elegida por AUC media de validación cruzada (0.843), umbral 0.28 seleccionado con predicciones fuera de pliegue (OOF) sobre entrenamiento. En test: recall 83.3 %, especificidad 67.0 %, accuracy 72.7 %, AUC 0.813; matriz de confusión TN=67, FP=33, FN=9, TP=45. **Cumple recall, pero no especificidad**. Estos valores en test no demuestran cumplimiento de ambos criterios bajo validación cruzada.
+
+Comparación A/B simulada de umbrales 0.50 y 0.28: se reducen 18 falsos negativos a cambio de 15 falsos positivos adicionales. Prueba de McNemar exacta p=0.7283; no se detectó diferencia significativa de exactitud, lo cual no demuestra equivalencia.
+
+**Limitaciones:** dataset de población específica, sin validación externa, análisis de subgrupos ni calibración documentada. No usar como diagnóstico.
 
 ## Equipo
 Equipo SAGAMA — cuatro integrantes (nombres por completar).
@@ -43,4 +51,4 @@ Registrar aquí los nombres, responsabilidades y contribuciones de los cuatro in
 ## Preparación
 Instalar dependencias con `pip install -r requirements.txt`, descargar el dataset y guardarlo localmente en `data/diabetes.csv`.
 
-**Estado:** estructura inicial. Aún no se han ejecutado experimentos ni calculado resultados.
+**Estado:** repositorio inicial creado y definición clínica completada; existe un Colab ejecutado aportado por el equipo, cuyos resultados se documentaron arriba. Pendiente integrar el notebook ejecutado original, sus artefactos exportados, y completar el reporte y el dashboard en el repositorio.
